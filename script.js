@@ -1,24 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- 1. Theme Toggle ---
     const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const iconBase = document.querySelector('.toggle-icon path');
-    const iconCircle = document.querySelector('.toggle-icon circle');
+    const htmlElement = document.documentElement;
 
     // Check saved theme
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        body.classList.add('light-mode');
-        // Update icon for light mode (sun)
-        // Simple SVG attribute toggle
-        // In a real app, you might swap the SVG content
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
     }
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-mode');
-            const isLight = body.classList.contains('light-mode');
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
         });
     }
 

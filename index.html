@@ -649,22 +649,7 @@
                             </div>
                         </div>
 
-                        <div class="section-footer">
-                            <div style="display: flex; flex-direction: column;">
-                                <span class="member-count">Team Members (<span
-                                        id="member-count-display">1</span>/4)</span>
-                                <span class="form-hint" style="color: var(--text-muted); margin-left: 0;">Min. 3 members
-                                    required</span>
-                            </div>
-                            <button type="button" id="add-member-btn" class="btn btn-outline btn-sm">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                                Add Member
-                            </button>
-                        </div>
+
                     </div>
 
                     <!-- Section 2: Team Leader -->
@@ -711,6 +696,23 @@
                     <!-- Additional Members Container -->
                     <div id="members-container">
                         <!-- Dynamic members will be added here -->
+                    </div>
+
+                    <!-- Moved Section Footer (Add Member) -->
+                    <div class="card form-section" style="border-style: dashed; background: transparent;">
+                        <div class="section-footer" style="border: none; margin-top: 0; padding-top: 0; width: 100%;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="member-count">Team Members (<span id="member-count-display">1</span>/4)</span>
+                                <span class="form-hint" style="color: var(--text-muted); margin-left: 0;">Min. 3 members required</span>
+                            </div>
+                            <button type="button" id="add-member-btn" class="btn btn-outline btn-sm">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                Add Member
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Terms & Submit -->

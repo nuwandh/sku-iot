@@ -48,16 +48,22 @@
 
 /* Light Mode Overrides */
 [data-theme="light"] {
-    --bg-background: #ffffff;
+    --bg-background: #f8fafc;
+    /* Slate-50 for subtle contrast with white cards */
     --bg-card: #ffffff;
-    --bg-surface: #f4f4f5;
+    --bg-surface: #f1f5f9;
+    /* Slate-100 */
 
-    --text-primary: #18181b;
-    --text-secondary: #52525b;
-    --text-muted: #a1a1aa;
+    --text-primary: #0f172a;
+    /* Slate-900 */
+    --text-secondary: #475569;
+    /* Slate-600 */
+    --text-muted: #64748b;
+    /* Slate-500 */
 
-    --border-color: #e4e4e7;
-    --bg-card: #fdfdfd;
+    --border-color: #e2e8f0;
+    /* Slate-200 */
+    /* Removed duplicate bg-card */
 }
 
 /* =========================================
@@ -104,6 +110,15 @@ select {
 
 .section {
     padding: 5rem 0;
+}
+
+.bg-muted-50 {
+    background-color: var(--bg-surface);
+}
+
+[data-theme="light"] .bg-muted-50 {
+    background-color: #ffffff;
+    /* Alternating white sections against slate-50 body */
 }
 
 /* Patterns */
@@ -1605,8 +1620,25 @@ label {
     background: #09090b;
 }
 
+[data-theme="light"] .registration-form input,
+[data-theme="light"] .registration-form select {
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="light"] .registration-form input:focus,
+[data-theme="light"] .registration-form select:focus {
+    background-color: #ffffff;
+    border-color: var(--color-primary);
+}
+
 .registration-form input::placeholder {
     color: #52525b;
+}
+
+[data-theme="light"] .registration-form input::placeholder {
+    color: var(--text-muted);
 }
 
 .form-hint {
